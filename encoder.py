@@ -20,7 +20,11 @@ def decode(encoded_password):
         and decodes it by shifting 3 digits down. For example:
         45678888 will change to 12345555
     '''
-    pass
+    decoded_password = ""
+    for num in encoded_password:
+        decoded_num = ((int(num)+10)-3)%10
+        decoded_password += str(decoded_num)
+    return decoded_password
 
 def main():
     ''' This is the main function. It will have a looping menu
